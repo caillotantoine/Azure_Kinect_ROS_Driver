@@ -59,7 +59,7 @@ def generate_launch_description():
         description="Enable or disable the depth camera"),
     DeclareLaunchArgument(
         'depth_mode',
-        default_value="WFOV_UNBINNED",
+        default_value="NFOV_UNBINNED",
         description="Set the depth camera mode, which affects FOV, depth range, and camera resolution. See Azure Kinect documentation for full details. Valid options: NFOV_UNBINNED, NFOV_2X2BINNED, WFOV_UNBINNED, WFOV_2X2BINNED, and PASSIVE_IR"),
     DeclareLaunchArgument(
         'depth_unit',
@@ -71,23 +71,23 @@ def generate_launch_description():
         description="Enable or disable the color camera"),
     DeclareLaunchArgument(
         'color_format',
-        default_value="bgra",
+        default_value="jpeg",
         description="The format of RGB camera. Valid options: bgra, jpeg"),
     DeclareLaunchArgument(
         'color_resolution',
-        default_value="1536P",
+        default_value="1080P",
         description="Resolution at which to run the color camera. Valid options: 720P, 1080P, 1440P, 1536P, 2160P, 3072P"),
     DeclareLaunchArgument(
         'fps',
-        default_value="5",
+        default_value="30",
         description="FPS to run both cameras at. Valid options are 5, 15, and 30"),
     DeclareLaunchArgument(
         'point_cloud',
-        default_value="true",
+        default_value="false",
         description="Generate a point cloud from depth data. Requires depth_enabled"),
     DeclareLaunchArgument(
         'rgb_point_cloud',
-        default_value="true",
+        default_value="false",
         description="Colorize the point cloud using the RBG camera. Requires color_enabled and depth_enabled"),
     DeclareLaunchArgument(
         'point_cloud_in_depth_frame',

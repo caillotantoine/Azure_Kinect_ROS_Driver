@@ -39,23 +39,13 @@ For more information, please consult the [Azure Kinect Sensor SDK usage guide](h
 
 Once the Azure Kinect Sensor SDK has been installed, the ROS node can be built using `colcon build`. Please note that you may need to run `colcon build --force-cmake-configure` to update the SDK binaries which are copied into the ROS output folders.
 
-#### Windows 10 platform:
+#### Ubuntu 24.04 platform:
 Open a terminal and navigate to your workspace:
 ```
-c:\opt\ros\foxy\x64\setup.bat
-git clone https://github.com/microsoft/Azure_Kinect_ROS_Driver.git -b foxy-devel
-pip3 install xacro
-cd Azure_Kinect_ROS_Driver
-colcon build 
-install\setup.bat
-```
-#### Ubuntu 20.04 platform:
-Open a terminal and navigate to your workspace:
-```
-source /opt/ros/foxy/setup.bash
-git clone https://github.com/microsoft/Azure_Kinect_ROS_Driver.git -b foxy-devel
-pip3 install xacro
-sudo apt install ros-foxy-joint-state-publisher
+source /opt/ros/jazzy/setup.bash
+git clone https://github.com/caillotantoine/Azure_Kinect_ROS_Driver.git -b jazzy
+pip3 install xacro --break-system-packages
+sudo apt install ros-jazzy-joint-state-publisher ros-jazzy-image-transport ros-jazzy-image-transport-plugins ros-jazzy-cv-bridge
 cd Azure_Kinect_ROS_Driver
 colcon build 
 source install/setup.bash

@@ -13,14 +13,9 @@ Please see the [building guide](building.md).
 ros2 launch azure_kinect_ros_driver driver.launch.py
 ```
 #### Launch Rviz2 for visualization of driver output streams: 
-Windows 10 platform:
+Ubuntu 24.04 platform:
 ```
-c:\opt\ros\foxy\x64\setup.bat
-rviz2
-```
-Ubuntu 20.04 platform:
-```
-source /opt/ros/foxy/setup.bash
+source /opt/ros/jazzy/setup.bash
 rviz2
 ```
 
